@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/volga.dir/src/main.cpp.o -o volga  -Wl,-rpath,/home/paul/cpp/vm/build libvolgavm.so
