@@ -1,4 +1,0 @@
-/home/paul/cpp/vm/build/CMakeFiles/volga.dir
-/home/paul/cpp/vm/build/CMakeFiles/volgavm.dir
-/home/paul/cpp/vm/build/CMakeFiles/edit_cache.dir
-/home/paul/cpp/vm/build/CMakeFiles/rebuild_cache.dir
