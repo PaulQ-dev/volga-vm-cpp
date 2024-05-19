@@ -6,6 +6,6 @@ using namespace paulqpro::volga;
 
 int main(){
     volga vm = volga();
-    
-    return 0;
+    vm.loadRom("rom.bin");
+    return vm.run();
 }
