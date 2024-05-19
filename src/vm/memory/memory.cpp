@@ -15,5 +15,5 @@ memory::memory(){
 }
 
 memory::~memory(){
-    
+    //delete [] _mem;// - causes double free
 }
