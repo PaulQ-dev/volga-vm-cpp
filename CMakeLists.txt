@@ -3,8 +3,4 @@ project(VM)
 
 set(BUILD_SHARED_LIBS 1)
 
-add_executable(volga src/main.cpp src/misc.h)
-
-add_library(volgavm src/vm/volga.cpp src/vm/volga.h src/vm/memory/memory.cpp src/vm/memory/memory.h src/misc.h)
-
-target_link_libraries(volga volgavm)
+add_executable(volga src/main.cpp src/vm/volga.cpp src/vm/volga.h src/vm/memory/memory.cpp src/vm/memory/memory.h src/misc.h)

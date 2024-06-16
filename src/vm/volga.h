@@ -15,17 +15,22 @@ namespace paulqpro::volga{
                 _stack_start, _stack_end,
                 _cout, _cin, _cnl, 
                 _prog_count, _addr_buffer;
-        byte_vm _proc_flags, _accum, _x_reg, _y_reg, _buffer, _mem_buffer, _stack_ptr, _stack_buffer;
+        ubyte_vm _proc_flags, _stack_ptr,
+                _a_reg, _b_reg, _x_reg, _y_reg,
+                _mem_buffer, _stack_buffer;
         memory _mem;
-        void loadA(byte_vm value), loadA(addr_vm address), storeA(addr_vm address);
-        void loadX(byte_vm value), loadX(addr_vm address), storeX(addr_vm address);
-        void loadY(byte_vm value), loadY(addr_vm address), storeY(addr_vm address);
-        void read(), readPC(), readAddr(), readAddrPC(), write();
+        void loadA(ubyte_vm value), loadA(addr_vm address), storeA(addr_vm address);
+        void loadB(ubyte_vm value), loadB(addr_vm address), storeB(addr_vm address);
+        void loadX(ubyte_vm value), loadX(addr_vm address), storeX(addr_vm address);
+        void loadY(ubyte_vm value), loadY(addr_vm address), storeY(addr_vm address);
+        void read(), readPC(), readAddr(), readAddrPC(), readProgCountPC(), write(), writeAddr();
         void push(), pull();
-        byte_vm ror(byte_vm original), rol(byte_vm original);
+        ubyte_vm ror(ubyte_vm original), rol(ubyte_vm original);
+        void bufferAddr(bool mem_buff_first), bufferProgC(bool mem_buff_first);
+        void jsrPrep(bool is_direct);
     public:
         int run();
-        bool loadRom(byte_vm rom[], int rom_len);
+        bool loadRom(ubyte_vm rom[], int rom_len);
         bool loadRom(string rom_file);
         string helloWorld();
         volga();

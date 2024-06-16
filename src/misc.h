@@ -1,4 +1,5 @@
 #pragma once
 
-typedef unsigned char byte_vm;
+typedef unsigned char ubyte_vm;
+typedef signed char sbyte_vm;
 typedef unsigned short addr_vm;
